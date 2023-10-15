@@ -57,5 +57,5 @@ Bun.serve({
       status: 404
     });
   },
-  port: 8081
+  port: process.env.PORT || 8080
 })
