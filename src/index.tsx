@@ -29,10 +29,11 @@ Bun.serve({
     for (const fullPagePath of allPageTsxPaths) {
       const pathSlug = fullPagePath.replace("src/app", "").replace("/page.tsx", "");
 
-      if (pathname === pathSlug) {
+      if (pathname === "/" && pathSlug === "") {
         pageFilePath = fullPagePath.replace("src/", "./");
       }
     }
+
     if (pageFilePath) {
       const Component = require(pageFilePath).default;
     
